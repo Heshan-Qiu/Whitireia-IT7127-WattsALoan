@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0e528495-6fa6-4414-b363-aab0662d33f5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8080/WattsALoanService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WattsALoanService.xsd" MetadataType="Schema" ID="a0caa4d0-7019-4f2d-8c9c-779c3acd25f9" SourceId="1" SourceUrl="http://localhost:8080/WattsALoanService.svc?xsd=xsd0" />
+    <MetadataFile FileName="WattsALoanService.disco" MetadataType="Disco" ID="34749ef8-6f09-4065-aad4-ebc90662016c" SourceId="1" SourceUrl="http://localhost:8080/WattsALoanService.svc?disco" />
+    <MetadataFile FileName="WattsALoanService1.xsd" MetadataType="Schema" ID="f29a9344-afc8-49df-8e50-61be611e3d64" SourceId="1" SourceUrl="http://localhost:8080/WattsALoanService.svc?xsd=xsd1" />
+    <MetadataFile FileName="WattsALoanService.wsdl" MetadataType="Wsdl" ID="98f2a0e7-a6a0-4870-ac85-f1d60fabb687" SourceId="1" SourceUrl="http://localhost:8080/WattsALoanService.svc?wsdl" />
+    <MetadataFile FileName="WattsALoanService2.xsd" MetadataType="Schema" ID="d139297f-5eb4-4c8f-a9a6-5dd9dce3474a" SourceId="1" SourceUrl="http://localhost:8080/WattsALoanService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
