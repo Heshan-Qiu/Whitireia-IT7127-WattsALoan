@@ -6,9 +6,9 @@
     <asp:TreeView ID="TreeView" runat="server">
         <Nodes>
             <asp:TreeNode Text="Manager" Value="Manager" NavigateUrl="~/Manager">
-                <asp:TreeNode Text="Add Employee" Value="Add Employee"></asp:TreeNode>
-                <asp:TreeNode Text="Modify Employee" Value="Modify Employee"></asp:TreeNode>
-                <asp:TreeNode Text="Create Loan" Value="Create Loan"></asp:TreeNode>
+                <asp:TreeNode Text="Add Employee" Value="Add Employee" NavigateUrl="~/Employee/Add"></asp:TreeNode>
+                <asp:TreeNode Text="Modify Employee" Value="Modify Employee" NavigateUrl="~/Employee/Modify"></asp:TreeNode>
+                <asp:TreeNode Text="Add Loan Type" Value="Add Loan Type" NavigateUrl="~/Loan/Add"></asp:TreeNode>
             </asp:TreeNode>
         </Nodes>
     </asp:TreeView>

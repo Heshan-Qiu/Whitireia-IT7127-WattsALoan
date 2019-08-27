@@ -76,6 +76,131 @@ namespace WattsALoanClient.WattsALoanServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Employee", Namespace="http://schemas.datacontract.org/2004/07/WattsALoanService")]
+    [System.SerializableAttribute()]
+    public partial class Employee : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int EmployeeIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EmployeeNumberField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FirstNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private float HourlySalaryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LastNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TitlesField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int EmployeeID {
+            get {
+                return this.EmployeeIDField;
+            }
+            set {
+                if ((this.EmployeeIDField.Equals(value) != true)) {
+                    this.EmployeeIDField = value;
+                    this.RaisePropertyChanged("EmployeeID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string EmployeeNumber {
+            get {
+                return this.EmployeeNumberField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EmployeeNumberField, value) != true)) {
+                    this.EmployeeNumberField = value;
+                    this.RaisePropertyChanged("EmployeeNumber");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FirstName {
+            get {
+                return this.FirstNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FirstNameField, value) != true)) {
+                    this.FirstNameField = value;
+                    this.RaisePropertyChanged("FirstName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public float HourlySalary {
+            get {
+                return this.HourlySalaryField;
+            }
+            set {
+                if ((this.HourlySalaryField.Equals(value) != true)) {
+                    this.HourlySalaryField = value;
+                    this.RaisePropertyChanged("HourlySalary");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LastName {
+            get {
+                return this.LastNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LastNameField, value) != true)) {
+                    this.LastNameField = value;
+                    this.RaisePropertyChanged("LastName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Titles {
+            get {
+                return this.TitlesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TitlesField, value) != true)) {
+                    this.TitlesField = value;
+                    this.RaisePropertyChanged("Titles");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Customer", Namespace="http://schemas.datacontract.org/2004/07/WattsALoanService")]
     [System.SerializableAttribute()]
     public partial class Customer : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -94,6 +219,9 @@ namespace WattsALoanClient.WattsALoanServiceReference {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string BillingZIPCideField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CustomerIDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime DateCreatedField;
@@ -167,6 +295,19 @@ namespace WattsALoanClient.WattsALoanServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public int CustomerID {
+            get {
+                return this.CustomerIDField;
+            }
+            set {
+                if ((this.CustomerIDField.Equals(value) != true)) {
+                    this.CustomerIDField = value;
+                    this.RaisePropertyChanged("CustomerID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public System.DateTime DateCreated {
             get {
                 return this.DateCreatedField;
@@ -215,6 +356,240 @@ namespace WattsALoanClient.WattsALoanServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Loan", Namespace="http://schemas.datacontract.org/2004/07/WattsALoanService")]
+    [System.SerializableAttribute()]
+    public partial class Loan : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LoanTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int LoanTypeIDField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LoanType {
+            get {
+                return this.LoanTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LoanTypeField, value) != true)) {
+                    this.LoanTypeField = value;
+                    this.RaisePropertyChanged("LoanType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int LoanTypeID {
+            get {
+                return this.LoanTypeIDField;
+            }
+            set {
+                if ((this.LoanTypeIDField.Equals(value) != true)) {
+                    this.LoanTypeIDField = value;
+                    this.RaisePropertyChanged("LoanTypeID");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="LoanAllocation", Namespace="http://schemas.datacontract.org/2004/07/WattsALoanService")]
+    [System.SerializableAttribute()]
+    public partial class LoanAllocation : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AccountNumberField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CustomerIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime DatePreparedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int EmployeeIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double InterestRateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int LoanAllocationIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double LoanAmountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int LoanTypeIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double PeriodsField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AccountNumber {
+            get {
+                return this.AccountNumberField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AccountNumberField, value) != true)) {
+                    this.AccountNumberField = value;
+                    this.RaisePropertyChanged("AccountNumber");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int CustomerID {
+            get {
+                return this.CustomerIDField;
+            }
+            set {
+                if ((this.CustomerIDField.Equals(value) != true)) {
+                    this.CustomerIDField = value;
+                    this.RaisePropertyChanged("CustomerID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime DatePrepared {
+            get {
+                return this.DatePreparedField;
+            }
+            set {
+                if ((this.DatePreparedField.Equals(value) != true)) {
+                    this.DatePreparedField = value;
+                    this.RaisePropertyChanged("DatePrepared");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int EmployeeID {
+            get {
+                return this.EmployeeIDField;
+            }
+            set {
+                if ((this.EmployeeIDField.Equals(value) != true)) {
+                    this.EmployeeIDField = value;
+                    this.RaisePropertyChanged("EmployeeID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double InterestRate {
+            get {
+                return this.InterestRateField;
+            }
+            set {
+                if ((this.InterestRateField.Equals(value) != true)) {
+                    this.InterestRateField = value;
+                    this.RaisePropertyChanged("InterestRate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int LoanAllocationID {
+            get {
+                return this.LoanAllocationIDField;
+            }
+            set {
+                if ((this.LoanAllocationIDField.Equals(value) != true)) {
+                    this.LoanAllocationIDField = value;
+                    this.RaisePropertyChanged("LoanAllocationID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double LoanAmount {
+            get {
+                return this.LoanAmountField;
+            }
+            set {
+                if ((this.LoanAmountField.Equals(value) != true)) {
+                    this.LoanAmountField = value;
+                    this.RaisePropertyChanged("LoanAmount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int LoanTypeID {
+            get {
+                return this.LoanTypeIDField;
+            }
+            set {
+                if ((this.LoanTypeIDField.Equals(value) != true)) {
+                    this.LoanTypeIDField = value;
+                    this.RaisePropertyChanged("LoanTypeID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Periods {
+            get {
+                return this.PeriodsField;
+            }
+            set {
+                if ((this.PeriodsField.Equals(value) != true)) {
+                    this.PeriodsField = value;
+                    this.RaisePropertyChanged("Periods");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="WattsALoanServiceReference.IWattsALoanService")]
     public interface IWattsALoanService {
@@ -231,11 +606,41 @@ namespace WattsALoanClient.WattsALoanServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWattsALoanService/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IWattsALoanService/GetDataUsingDataContractResponse")]
         System.Threading.Tasks.Task<WattsALoanClient.WattsALoanServiceReference.CompositeType> GetDataUsingDataContractAsync(WattsALoanClient.WattsALoanServiceReference.CompositeType composite);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWattsALoanService/InsertEmployee", ReplyAction="http://tempuri.org/IWattsALoanService/InsertEmployeeResponse")]
+        bool InsertEmployee(WattsALoanClient.WattsALoanServiceReference.Employee employee);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWattsALoanService/InsertEmployee", ReplyAction="http://tempuri.org/IWattsALoanService/InsertEmployeeResponse")]
+        System.Threading.Tasks.Task<bool> InsertEmployeeAsync(WattsALoanClient.WattsALoanServiceReference.Employee employee);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWattsALoanService/DeleteEmployee", ReplyAction="http://tempuri.org/IWattsALoanService/DeleteEmployeeResponse")]
+        bool DeleteEmployee(int employeeID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWattsALoanService/DeleteEmployee", ReplyAction="http://tempuri.org/IWattsALoanService/DeleteEmployeeResponse")]
+        System.Threading.Tasks.Task<bool> DeleteEmployeeAsync(int employeeID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWattsALoanService/UpdateEmployee", ReplyAction="http://tempuri.org/IWattsALoanService/UpdateEmployeeResponse")]
+        bool UpdateEmployee(WattsALoanClient.WattsALoanServiceReference.Employee employee);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWattsALoanService/UpdateEmployee", ReplyAction="http://tempuri.org/IWattsALoanService/UpdateEmployeeResponse")]
+        System.Threading.Tasks.Task<bool> UpdateEmployeeAsync(WattsALoanClient.WattsALoanServiceReference.Employee employee);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWattsALoanService/InsertCustomer", ReplyAction="http://tempuri.org/IWattsALoanService/InsertCustomerResponse")]
         bool InsertCustomer(WattsALoanClient.WattsALoanServiceReference.Customer customer);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWattsALoanService/InsertCustomer", ReplyAction="http://tempuri.org/IWattsALoanService/InsertCustomerResponse")]
         System.Threading.Tasks.Task<bool> InsertCustomerAsync(WattsALoanClient.WattsALoanServiceReference.Customer customer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWattsALoanService/InsertLoan", ReplyAction="http://tempuri.org/IWattsALoanService/InsertLoanResponse")]
+        bool InsertLoan(WattsALoanClient.WattsALoanServiceReference.Loan loan);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWattsALoanService/InsertLoan", ReplyAction="http://tempuri.org/IWattsALoanService/InsertLoanResponse")]
+        System.Threading.Tasks.Task<bool> InsertLoanAsync(WattsALoanClient.WattsALoanServiceReference.Loan loan);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWattsALoanService/InsertLoanAllocation", ReplyAction="http://tempuri.org/IWattsALoanService/InsertLoanAllocationResponse")]
+        bool InsertLoanAllocation(WattsALoanClient.WattsALoanServiceReference.LoanAllocation loanAllocation);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWattsALoanService/InsertLoanAllocation", ReplyAction="http://tempuri.org/IWattsALoanService/InsertLoanAllocationResponse")]
+        System.Threading.Tasks.Task<bool> InsertLoanAllocationAsync(WattsALoanClient.WattsALoanServiceReference.LoanAllocation loanAllocation);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -281,12 +686,52 @@ namespace WattsALoanClient.WattsALoanServiceReference {
             return base.Channel.GetDataUsingDataContractAsync(composite);
         }
         
+        public bool InsertEmployee(WattsALoanClient.WattsALoanServiceReference.Employee employee) {
+            return base.Channel.InsertEmployee(employee);
+        }
+        
+        public System.Threading.Tasks.Task<bool> InsertEmployeeAsync(WattsALoanClient.WattsALoanServiceReference.Employee employee) {
+            return base.Channel.InsertEmployeeAsync(employee);
+        }
+        
+        public bool DeleteEmployee(int employeeID) {
+            return base.Channel.DeleteEmployee(employeeID);
+        }
+        
+        public System.Threading.Tasks.Task<bool> DeleteEmployeeAsync(int employeeID) {
+            return base.Channel.DeleteEmployeeAsync(employeeID);
+        }
+        
+        public bool UpdateEmployee(WattsALoanClient.WattsALoanServiceReference.Employee employee) {
+            return base.Channel.UpdateEmployee(employee);
+        }
+        
+        public System.Threading.Tasks.Task<bool> UpdateEmployeeAsync(WattsALoanClient.WattsALoanServiceReference.Employee employee) {
+            return base.Channel.UpdateEmployeeAsync(employee);
+        }
+        
         public bool InsertCustomer(WattsALoanClient.WattsALoanServiceReference.Customer customer) {
             return base.Channel.InsertCustomer(customer);
         }
         
         public System.Threading.Tasks.Task<bool> InsertCustomerAsync(WattsALoanClient.WattsALoanServiceReference.Customer customer) {
             return base.Channel.InsertCustomerAsync(customer);
+        }
+        
+        public bool InsertLoan(WattsALoanClient.WattsALoanServiceReference.Loan loan) {
+            return base.Channel.InsertLoan(loan);
+        }
+        
+        public System.Threading.Tasks.Task<bool> InsertLoanAsync(WattsALoanClient.WattsALoanServiceReference.Loan loan) {
+            return base.Channel.InsertLoanAsync(loan);
+        }
+        
+        public bool InsertLoanAllocation(WattsALoanClient.WattsALoanServiceReference.LoanAllocation loanAllocation) {
+            return base.Channel.InsertLoanAllocation(loanAllocation);
+        }
+        
+        public System.Threading.Tasks.Task<bool> InsertLoanAllocationAsync(WattsALoanClient.WattsALoanServiceReference.LoanAllocation loanAllocation) {
+            return base.Channel.InsertLoanAllocationAsync(loanAllocation);
         }
     }
 }

@@ -1,10 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
   <siteMapNode url="~/" title="Home"  description="Home page">
-    <siteMapNode url="~/Manager" title="Manager"  description="Manager page" />
+    <siteMapNode url="~/Manager" title="Manager"  description="Manager page">
+      <siteMapNode url="~/Employee/Add" title="Add Employee" description="Create a new employee record page." />
+      <siteMapNode url="~/Employee/Modify" title="Modify Employees" description="Modify existing employee records page." />
+      <siteMapNode url="~/Loan/Add" title="Add Loan Type" description="Create a new loan type record page." />
+    </siteMapNode>
     <siteMapNode url="~/Advisor" title="Advisor"  description="Advisor page">
       <siteMapNode url="~/Customer/Add" title="Add Customer" description="Create a new customer record page." />
-      <siteMapNode url="~/Customer/Modify" title="Modify Customer" description="Modify a existing customer record page." />
+      <siteMapNode url="~/Customer/Modify" title="Modify Customers" description="Modify existing customer records page." />
     </siteMapNode>
   </siteMapNode>
 </siteMap>

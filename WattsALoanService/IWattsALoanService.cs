@@ -21,7 +21,22 @@ namespace WattsALoanService
 
         // TODO: Add your service operations here
         [OperationContract]
+        bool InsertEmployee(Employee employee);
+
+        [OperationContract]
+        bool DeleteEmployee(int employeeID);
+
+        [OperationContract]
+        bool UpdateEmployee(Employee employee);
+
+        [OperationContract]
         bool InsertCustomer(Customer customer);
+
+        [OperationContract]
+        bool InsertLoan(Loan loan);
+
+        [OperationContract]
+        bool InsertLoanAllocation(LoanAllocation loanAllocation);
     }
 
 
@@ -48,8 +63,33 @@ namespace WattsALoanService
     }
 
     [DataContract]
+    public class Employee
+    {
+        int employeeID;
+        string employeeNumber;
+        string firstName;
+        string lastName;
+        string titles;
+        float hourlySalary;
+
+        [DataMember]
+        public int EmployeeID { get => employeeID; set => employeeID = value; }
+        [DataMember]
+        public string EmployeeNumber { get => employeeNumber; set => employeeNumber = value; }
+        [DataMember]
+        public string FirstName { get => firstName; set => firstName = value; }
+        [DataMember]
+        public string LastName { get => lastName; set => lastName = value; }
+        [DataMember]
+        public string Titles { get => titles; set => titles = value; }
+        [DataMember]
+        public float HourlySalary { get => hourlySalary; set => hourlySalary = value; }
+    }
+
+    [DataContract]
     public class Customer
     {
+        int customerID;
         DateTime dateCreated = DateTime.Now;
         string fullName;
         string billingAddress;
@@ -58,6 +98,8 @@ namespace WattsALoanService
         string billingZIPCide;
         string emailAddress;
 
+        [DataMember]
+        public int CustomerID { get => customerID; set => customerID = value; }
         [DataMember]
         public DateTime DateCreated { get => dateCreated; set => dateCreated = value; }
         [DataMember]
@@ -72,5 +114,50 @@ namespace WattsALoanService
         public string BillingZIPCide { get => billingZIPCide; set => billingZIPCide = value; }
         [DataMember]
         public string EmailAddress { get => emailAddress; set => emailAddress = value; }
+    }
+
+    [DataContract]
+    public class Loan
+    {
+        int loanTypeID;
+        string loanType;
+
+        [DataMember]
+        public int LoanTypeID { get => loanTypeID; set => loanTypeID = value; }
+        [DataMember]
+        public string LoanType { get => loanType; set => loanType = value; }
+    }
+
+    [DataContract]
+    public class LoanAllocation
+    {
+        int loanAllocationID;
+        DateTime datePrepared;
+        int employeeID;
+        int customerID;
+        string accountNumber;
+        int loanTypeID;
+        double loanAmount;
+        double interestRate;
+        double periods;
+
+        [DataMember]
+        public int LoanAllocationID { get => loanAllocationID; set => loanAllocationID = value; }
+        [DataMember]
+        public DateTime DatePrepared { get => datePrepared; set => datePrepared = value; }
+        [DataMember]
+        public int EmployeeID { get => employeeID; set => employeeID = value; }
+        [DataMember]
+        public int CustomerID { get => customerID; set => customerID = value; }
+        [DataMember]
+        public string AccountNumber { get => accountNumber; set => accountNumber = value; }
+        [DataMember]
+        public int LoanTypeID { get => loanTypeID; set => loanTypeID = value; }
+        [DataMember]
+        public double LoanAmount { get => loanAmount; set => loanAmount = value; }
+        [DataMember]
+        public double InterestRate { get => interestRate; set => interestRate = value; }
+        [DataMember]
+        public double Periods { get => periods; set => periods = value; }
     }
 }

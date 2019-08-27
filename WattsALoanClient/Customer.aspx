@@ -17,6 +17,7 @@
         <asp:RequiredFieldValidator runat="server" ControlToValidate="TbxState" ErrorMessage="Billing state is required.">&nbsp;</asp:RequiredFieldValidator>
         <asp:RequiredFieldValidator runat="server" ControlToValidate="TbxZipCide" ErrorMessage="Billing ZIP cide is required.">&nbsp;</asp:RequiredFieldValidator>
         <asp:RequiredFieldValidator runat="server" ControlToValidate="TbxEmail" ErrorMessage="Email address is required.">&nbsp;</asp:RequiredFieldValidator>
-        <br /><br /><asp:Button ID="ButtonSubmit" runat="server" CssClass="btn-primary" Text="Submit" PostBackUrl="~/Customer/Add" />
+        <asp:RegularExpressionValidator runat="server" ControlToValidate="TbxEmail" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ErrorMessage="Email address is invalid.">&nbsp;</asp:RegularExpressionValidator>
+        <br /><br /><asp:Button ID="ButtonSubmit" runat="server" CssClass="btn-primary" Text="Submit" OnClick="ButtonSubmit_Click" />
     </div>
 </asp:Content>

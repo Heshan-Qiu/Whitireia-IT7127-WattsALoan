@@ -19,11 +19,41 @@
   <wsdl:message name="IWattsALoanService_GetDataUsingDataContract_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
   </wsdl:message>
+  <wsdl:message name="IWattsALoanService_InsertEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IWattsALoanService_InsertEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWattsALoanService_DeleteEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IWattsALoanService_DeleteEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWattsALoanService_UpdateEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IWattsALoanService_UpdateEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEmployeeResponse" />
+  </wsdl:message>
   <wsdl:message name="IWattsALoanService_InsertCustomer_InputMessage">
     <wsdl:part name="parameters" element="tns:InsertCustomer" />
   </wsdl:message>
   <wsdl:message name="IWattsALoanService_InsertCustomer_OutputMessage">
     <wsdl:part name="parameters" element="tns:InsertCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWattsALoanService_InsertLoan_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertLoan" />
+  </wsdl:message>
+  <wsdl:message name="IWattsALoanService_InsertLoan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertLoanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWattsALoanService_InsertLoanAllocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertLoanAllocation" />
+  </wsdl:message>
+  <wsdl:message name="IWattsALoanService_InsertLoanAllocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertLoanAllocationResponse" />
   </wsdl:message>
   <wsdl:portType name="IWattsALoanService">
     <wsdl:operation name="GetData">
@@ -34,9 +64,29 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IWattsALoanService/GetDataUsingDataContract" message="tns:IWattsALoanService_GetDataUsingDataContract_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IWattsALoanService/GetDataUsingDataContractResponse" message="tns:IWattsALoanService_GetDataUsingDataContract_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="InsertEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWattsALoanService/InsertEmployee" message="tns:IWattsALoanService_InsertEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWattsALoanService/InsertEmployeeResponse" message="tns:IWattsALoanService_InsertEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWattsALoanService/DeleteEmployee" message="tns:IWattsALoanService_DeleteEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWattsALoanService/DeleteEmployeeResponse" message="tns:IWattsALoanService_DeleteEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWattsALoanService/UpdateEmployee" message="tns:IWattsALoanService_UpdateEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWattsALoanService/UpdateEmployeeResponse" message="tns:IWattsALoanService_UpdateEmployee_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="InsertCustomer">
       <wsdl:input wsaw:Action="http://tempuri.org/IWattsALoanService/InsertCustomer" message="tns:IWattsALoanService_InsertCustomer_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IWattsALoanService/InsertCustomerResponse" message="tns:IWattsALoanService_InsertCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertLoan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWattsALoanService/InsertLoan" message="tns:IWattsALoanService_InsertLoan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWattsALoanService/InsertLoanResponse" message="tns:IWattsALoanService_InsertLoan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertLoanAllocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWattsALoanService/InsertLoanAllocation" message="tns:IWattsALoanService_InsertLoanAllocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWattsALoanService/InsertLoanAllocationResponse" message="tns:IWattsALoanService_InsertLoanAllocation_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IWattsALoanService" type="tns:IWattsALoanService">
@@ -59,8 +109,53 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="InsertEmployee">
+      <soap:operation soapAction="http://tempuri.org/IWattsALoanService/InsertEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmployee">
+      <soap:operation soapAction="http://tempuri.org/IWattsALoanService/DeleteEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmployee">
+      <soap:operation soapAction="http://tempuri.org/IWattsALoanService/UpdateEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="InsertCustomer">
       <soap:operation soapAction="http://tempuri.org/IWattsALoanService/InsertCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertLoan">
+      <soap:operation soapAction="http://tempuri.org/IWattsALoanService/InsertLoan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertLoanAllocation">
+      <soap:operation soapAction="http://tempuri.org/IWattsALoanService/InsertLoanAllocation" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
