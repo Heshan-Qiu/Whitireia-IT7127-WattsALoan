@@ -358,18 +358,18 @@ namespace WattsALoanClient.WattsALoanServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Loan", Namespace="http://schemas.datacontract.org/2004/07/WattsALoanService")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="LoanType", Namespace="http://schemas.datacontract.org/2004/07/WattsALoanService")]
     [System.SerializableAttribute()]
-    public partial class Loan : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class LoanType : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string LoanTypeField;
+        private int LoanTypeIDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int LoanTypeIDField;
+        private string LoanTypeNameField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -382,19 +382,6 @@ namespace WattsALoanClient.WattsALoanServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string LoanType {
-            get {
-                return this.LoanTypeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.LoanTypeField, value) != true)) {
-                    this.LoanTypeField = value;
-                    this.RaisePropertyChanged("LoanType");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public int LoanTypeID {
             get {
                 return this.LoanTypeIDField;
@@ -403,6 +390,19 @@ namespace WattsALoanClient.WattsALoanServiceReference {
                 if ((this.LoanTypeIDField.Equals(value) != true)) {
                     this.LoanTypeIDField = value;
                     this.RaisePropertyChanged("LoanTypeID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LoanTypeName {
+            get {
+                return this.LoanTypeNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LoanTypeNameField, value) != true)) {
+                    this.LoanTypeNameField = value;
+                    this.RaisePropertyChanged("LoanTypeName");
                 }
             }
         }
@@ -590,6 +590,115 @@ namespace WattsALoanClient.WattsALoanServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Payment", Namespace="http://schemas.datacontract.org/2004/07/WattsALoanService")]
+    [System.SerializableAttribute()]
+    public partial class Payment : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int EmployeeIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int LoanAllocationIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double PaymentAmountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime PaymentDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PaymentIDField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int EmployeeID {
+            get {
+                return this.EmployeeIDField;
+            }
+            set {
+                if ((this.EmployeeIDField.Equals(value) != true)) {
+                    this.EmployeeIDField = value;
+                    this.RaisePropertyChanged("EmployeeID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int LoanAllocationID {
+            get {
+                return this.LoanAllocationIDField;
+            }
+            set {
+                if ((this.LoanAllocationIDField.Equals(value) != true)) {
+                    this.LoanAllocationIDField = value;
+                    this.RaisePropertyChanged("LoanAllocationID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double PaymentAmount {
+            get {
+                return this.PaymentAmountField;
+            }
+            set {
+                if ((this.PaymentAmountField.Equals(value) != true)) {
+                    this.PaymentAmountField = value;
+                    this.RaisePropertyChanged("PaymentAmount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime PaymentDate {
+            get {
+                return this.PaymentDateField;
+            }
+            set {
+                if ((this.PaymentDateField.Equals(value) != true)) {
+                    this.PaymentDateField = value;
+                    this.RaisePropertyChanged("PaymentDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int PaymentID {
+            get {
+                return this.PaymentIDField;
+            }
+            set {
+                if ((this.PaymentIDField.Equals(value) != true)) {
+                    this.PaymentIDField = value;
+                    this.RaisePropertyChanged("PaymentID");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="WattsALoanServiceReference.IWattsALoanService")]
     public interface IWattsALoanService {
@@ -630,17 +739,65 @@ namespace WattsALoanClient.WattsALoanServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWattsALoanService/InsertCustomer", ReplyAction="http://tempuri.org/IWattsALoanService/InsertCustomerResponse")]
         System.Threading.Tasks.Task<bool> InsertCustomerAsync(WattsALoanClient.WattsALoanServiceReference.Customer customer);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWattsALoanService/InsertLoan", ReplyAction="http://tempuri.org/IWattsALoanService/InsertLoanResponse")]
-        bool InsertLoan(WattsALoanClient.WattsALoanServiceReference.Loan loan);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWattsALoanService/UpdateCustomer", ReplyAction="http://tempuri.org/IWattsALoanService/UpdateCustomerResponse")]
+        bool UpdateCustomer(WattsALoanClient.WattsALoanServiceReference.Customer customer);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWattsALoanService/InsertLoan", ReplyAction="http://tempuri.org/IWattsALoanService/InsertLoanResponse")]
-        System.Threading.Tasks.Task<bool> InsertLoanAsync(WattsALoanClient.WattsALoanServiceReference.Loan loan);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWattsALoanService/UpdateCustomer", ReplyAction="http://tempuri.org/IWattsALoanService/UpdateCustomerResponse")]
+        System.Threading.Tasks.Task<bool> UpdateCustomerAsync(WattsALoanClient.WattsALoanServiceReference.Customer customer);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWattsALoanService/InsertLoanType", ReplyAction="http://tempuri.org/IWattsALoanService/InsertLoanTypeResponse")]
+        bool InsertLoanType(WattsALoanClient.WattsALoanServiceReference.LoanType loanType);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWattsALoanService/InsertLoanType", ReplyAction="http://tempuri.org/IWattsALoanService/InsertLoanTypeResponse")]
+        System.Threading.Tasks.Task<bool> InsertLoanTypeAsync(WattsALoanClient.WattsALoanServiceReference.LoanType loanType);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWattsALoanService/GetLoanTypes", ReplyAction="http://tempuri.org/IWattsALoanService/GetLoanTypesResponse")]
+        WattsALoanClient.WattsALoanServiceReference.LoanType[] GetLoanTypes();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWattsALoanService/GetLoanTypes", ReplyAction="http://tempuri.org/IWattsALoanService/GetLoanTypesResponse")]
+        System.Threading.Tasks.Task<WattsALoanClient.WattsALoanServiceReference.LoanType[]> GetLoanTypesAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWattsALoanService/InsertLoanAllocation", ReplyAction="http://tempuri.org/IWattsALoanService/InsertLoanAllocationResponse")]
         bool InsertLoanAllocation(WattsALoanClient.WattsALoanServiceReference.LoanAllocation loanAllocation);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWattsALoanService/InsertLoanAllocation", ReplyAction="http://tempuri.org/IWattsALoanService/InsertLoanAllocationResponse")]
         System.Threading.Tasks.Task<bool> InsertLoanAllocationAsync(WattsALoanClient.WattsALoanServiceReference.LoanAllocation loanAllocation);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWattsALoanService/GetLoanAllocations", ReplyAction="http://tempuri.org/IWattsALoanService/GetLoanAllocationsResponse")]
+        WattsALoanClient.WattsALoanServiceReference.LoanAllocation[] GetLoanAllocations(int customerID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWattsALoanService/GetLoanAllocations", ReplyAction="http://tempuri.org/IWattsALoanService/GetLoanAllocationsResponse")]
+        System.Threading.Tasks.Task<WattsALoanClient.WattsALoanServiceReference.LoanAllocation[]> GetLoanAllocationsAsync(int customerID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWattsALoanService/GetEmployee", ReplyAction="http://tempuri.org/IWattsALoanService/GetEmployeeResponse")]
+        WattsALoanClient.WattsALoanServiceReference.Employee GetEmployee(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWattsALoanService/GetEmployee", ReplyAction="http://tempuri.org/IWattsALoanService/GetEmployeeResponse")]
+        System.Threading.Tasks.Task<WattsALoanClient.WattsALoanServiceReference.Employee> GetEmployeeAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWattsALoanService/GetEmployees", ReplyAction="http://tempuri.org/IWattsALoanService/GetEmployeesResponse")]
+        WattsALoanClient.WattsALoanServiceReference.Employee[] GetEmployees();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWattsALoanService/GetEmployees", ReplyAction="http://tempuri.org/IWattsALoanService/GetEmployeesResponse")]
+        System.Threading.Tasks.Task<WattsALoanClient.WattsALoanServiceReference.Employee[]> GetEmployeesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWattsALoanService/GetCustomer", ReplyAction="http://tempuri.org/IWattsALoanService/GetCustomerResponse")]
+        WattsALoanClient.WattsALoanServiceReference.Customer GetCustomer(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWattsALoanService/GetCustomer", ReplyAction="http://tempuri.org/IWattsALoanService/GetCustomerResponse")]
+        System.Threading.Tasks.Task<WattsALoanClient.WattsALoanServiceReference.Customer> GetCustomerAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWattsALoanService/GetCustomers", ReplyAction="http://tempuri.org/IWattsALoanService/GetCustomersResponse")]
+        WattsALoanClient.WattsALoanServiceReference.Customer[] GetCustomers();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWattsALoanService/GetCustomers", ReplyAction="http://tempuri.org/IWattsALoanService/GetCustomersResponse")]
+        System.Threading.Tasks.Task<WattsALoanClient.WattsALoanServiceReference.Customer[]> GetCustomersAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWattsALoanService/RecordPayment", ReplyAction="http://tempuri.org/IWattsALoanService/RecordPaymentResponse")]
+        bool RecordPayment(WattsALoanClient.WattsALoanServiceReference.Payment payment);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWattsALoanService/RecordPayment", ReplyAction="http://tempuri.org/IWattsALoanService/RecordPaymentResponse")]
+        System.Threading.Tasks.Task<bool> RecordPaymentAsync(WattsALoanClient.WattsALoanServiceReference.Payment payment);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -718,12 +875,28 @@ namespace WattsALoanClient.WattsALoanServiceReference {
             return base.Channel.InsertCustomerAsync(customer);
         }
         
-        public bool InsertLoan(WattsALoanClient.WattsALoanServiceReference.Loan loan) {
-            return base.Channel.InsertLoan(loan);
+        public bool UpdateCustomer(WattsALoanClient.WattsALoanServiceReference.Customer customer) {
+            return base.Channel.UpdateCustomer(customer);
         }
         
-        public System.Threading.Tasks.Task<bool> InsertLoanAsync(WattsALoanClient.WattsALoanServiceReference.Loan loan) {
-            return base.Channel.InsertLoanAsync(loan);
+        public System.Threading.Tasks.Task<bool> UpdateCustomerAsync(WattsALoanClient.WattsALoanServiceReference.Customer customer) {
+            return base.Channel.UpdateCustomerAsync(customer);
+        }
+        
+        public bool InsertLoanType(WattsALoanClient.WattsALoanServiceReference.LoanType loanType) {
+            return base.Channel.InsertLoanType(loanType);
+        }
+        
+        public System.Threading.Tasks.Task<bool> InsertLoanTypeAsync(WattsALoanClient.WattsALoanServiceReference.LoanType loanType) {
+            return base.Channel.InsertLoanTypeAsync(loanType);
+        }
+        
+        public WattsALoanClient.WattsALoanServiceReference.LoanType[] GetLoanTypes() {
+            return base.Channel.GetLoanTypes();
+        }
+        
+        public System.Threading.Tasks.Task<WattsALoanClient.WattsALoanServiceReference.LoanType[]> GetLoanTypesAsync() {
+            return base.Channel.GetLoanTypesAsync();
         }
         
         public bool InsertLoanAllocation(WattsALoanClient.WattsALoanServiceReference.LoanAllocation loanAllocation) {
@@ -732,6 +905,54 @@ namespace WattsALoanClient.WattsALoanServiceReference {
         
         public System.Threading.Tasks.Task<bool> InsertLoanAllocationAsync(WattsALoanClient.WattsALoanServiceReference.LoanAllocation loanAllocation) {
             return base.Channel.InsertLoanAllocationAsync(loanAllocation);
+        }
+        
+        public WattsALoanClient.WattsALoanServiceReference.LoanAllocation[] GetLoanAllocations(int customerID) {
+            return base.Channel.GetLoanAllocations(customerID);
+        }
+        
+        public System.Threading.Tasks.Task<WattsALoanClient.WattsALoanServiceReference.LoanAllocation[]> GetLoanAllocationsAsync(int customerID) {
+            return base.Channel.GetLoanAllocationsAsync(customerID);
+        }
+        
+        public WattsALoanClient.WattsALoanServiceReference.Employee GetEmployee(int id) {
+            return base.Channel.GetEmployee(id);
+        }
+        
+        public System.Threading.Tasks.Task<WattsALoanClient.WattsALoanServiceReference.Employee> GetEmployeeAsync(int id) {
+            return base.Channel.GetEmployeeAsync(id);
+        }
+        
+        public WattsALoanClient.WattsALoanServiceReference.Employee[] GetEmployees() {
+            return base.Channel.GetEmployees();
+        }
+        
+        public System.Threading.Tasks.Task<WattsALoanClient.WattsALoanServiceReference.Employee[]> GetEmployeesAsync() {
+            return base.Channel.GetEmployeesAsync();
+        }
+        
+        public WattsALoanClient.WattsALoanServiceReference.Customer GetCustomer(int id) {
+            return base.Channel.GetCustomer(id);
+        }
+        
+        public System.Threading.Tasks.Task<WattsALoanClient.WattsALoanServiceReference.Customer> GetCustomerAsync(int id) {
+            return base.Channel.GetCustomerAsync(id);
+        }
+        
+        public WattsALoanClient.WattsALoanServiceReference.Customer[] GetCustomers() {
+            return base.Channel.GetCustomers();
+        }
+        
+        public System.Threading.Tasks.Task<WattsALoanClient.WattsALoanServiceReference.Customer[]> GetCustomersAsync() {
+            return base.Channel.GetCustomersAsync();
+        }
+        
+        public bool RecordPayment(WattsALoanClient.WattsALoanServiceReference.Payment payment) {
+            return base.Channel.RecordPayment(payment);
+        }
+        
+        public System.Threading.Tasks.Task<bool> RecordPaymentAsync(WattsALoanClient.WattsALoanServiceReference.Payment payment) {
+            return base.Channel.RecordPaymentAsync(payment);
         }
     }
 }

@@ -4,11 +4,15 @@
     <siteMapNode url="~/Manager" title="Manager"  description="Manager page">
       <siteMapNode url="~/Employee/Add" title="Add Employee" description="Create a new employee record page." />
       <siteMapNode url="~/Employee/Modify" title="Modify Employees" description="Modify existing employee records page." />
-      <siteMapNode url="~/Loan/Add" title="Add Loan Type" description="Create a new loan type record page." />
+      <siteMapNode url="~/Employee/Edit" title="Edit Employee" description="Edit existing employee record page." />
+      <siteMapNode url="~/LoanType/Add" title="Add Loan Type" description="Create a new loan type record page." />
     </siteMapNode>
     <siteMapNode url="~/Advisor" title="Advisor"  description="Advisor page">
       <siteMapNode url="~/Customer/Add" title="Add Customer" description="Create a new customer record page." />
       <siteMapNode url="~/Customer/Modify" title="Modify Customers" description="Modify existing customer records page." />
+      <siteMapNode url="~/Customer/Edit" title="Edit Customer" description="Edit existing customer record page." />
+      <siteMapNode url="~/LoanAllocation/Add" title="Add Loan Allocation" description="Create a loan allocation record page." />
+      <siteMapNode url="~/Payment/Record" title="Record Payment" description="Record a payment page." />
     </siteMapNode>
   </siteMapNode>
 </siteMap>

@@ -85,24 +85,50 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="InsertLoan">
+  <xs:element name="UpdateCustomer">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WattsALoanService" minOccurs="0" name="loan" nillable="true" type="q6:Loan" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WattsALoanService" minOccurs="0" name="customer" nillable="true" type="q6:Customer" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="InsertLoanResponse">
+  <xs:element name="UpdateCustomerResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="InsertLoanResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="UpdateCustomerResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertLoanType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WattsALoanService" minOccurs="0" name="loanType" nillable="true" type="q7:LoanType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertLoanTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertLoanTypeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLoanTypes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLoanTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WattsALoanService" minOccurs="0" name="GetLoanTypesResult" nillable="true" type="q8:ArrayOfLoanType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="InsertLoanAllocation">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WattsALoanService" minOccurs="0" name="loanAllocation" nillable="true" type="q7:LoanAllocation" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WattsALoanService" minOccurs="0" name="loanAllocation" nillable="true" type="q9:LoanAllocation" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -110,6 +136,86 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="InsertLoanAllocationResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLoanAllocations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="customerID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLoanAllocationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WattsALoanService" minOccurs="0" name="GetLoanAllocationsResult" nillable="true" type="q10:ArrayOfLoanAllocation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployee">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/WattsALoanService" minOccurs="0" name="GetEmployeeResult" nillable="true" type="q11:Employee" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployees">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/WattsALoanService" minOccurs="0" name="GetEmployeesResult" nillable="true" type="q12:ArrayOfEmployee" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/WattsALoanService" minOccurs="0" name="GetCustomerResult" nillable="true" type="q13:Customer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomers">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/WattsALoanService" minOccurs="0" name="GetCustomersResult" nillable="true" type="q14:ArrayOfCustomer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecordPayment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/WattsALoanService" minOccurs="0" name="payment" nillable="true" type="q15:Payment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecordPaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RecordPaymentResult" type="xs:boolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

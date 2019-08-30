@@ -7,8 +7,9 @@
         <Nodes>
             <asp:TreeNode Text="Advisor" Value="Manager" NavigateUrl="~/Advisor">
                 <asp:TreeNode Text="Add Customer" Value="Add Customer" NavigateUrl="~/Customer/Add"></asp:TreeNode>
-                <asp:TreeNode Text="Modify Customer" Value="Modify Customer"></asp:TreeNode>
-                <asp:TreeNode Text="Create Loan" Value="Create Loan"></asp:TreeNode>
+                <asp:TreeNode Text="Modify Customers" Value="Modify Customers" NavigateUrl="~/Customer/Modify"></asp:TreeNode>
+                <asp:TreeNode Text="Add Loan Allocation" Value="Add Loan Allocation" NavigateUrl="~/LoanAllocation/Add"></asp:TreeNode>
+                <asp:TreeNode Text="Record Payment" Value="Record Payment" NavigateUrl="~/Payment/Record"></asp:TreeNode>
             </asp:TreeNode>
         </Nodes>
     </asp:TreeView>

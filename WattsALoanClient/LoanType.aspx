@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Add Loan Type" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Loan.aspx.cs" Inherits="WattsALoanClient.Loan" %>
+﻿<%@ Page Title="Add Loan Type" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="LoanType.aspx.cs" Inherits="WattsALoanClient.LoanType" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h4><asp:SiteMapPath ID="SiteMapPath" runat="server"></asp:SiteMapPath></h4>

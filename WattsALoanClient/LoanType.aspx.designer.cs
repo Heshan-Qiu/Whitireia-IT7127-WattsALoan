@@ -10,7 +10,7 @@
 namespace WattsALoanClient {
     
     
-    public partial class Loan {
+    public partial class LoanType {
         
         /// <summary>
         /// SiteMapPath control.

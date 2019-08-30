@@ -33,10 +33,34 @@ namespace WattsALoanService
         bool InsertCustomer(Customer customer);
 
         [OperationContract]
-        bool InsertLoan(Loan loan);
+        bool UpdateCustomer(Customer customer);
+
+        [OperationContract]
+        bool InsertLoanType(LoanType loanType);
+
+        [OperationContract]
+        IList<LoanType> GetLoanTypes();
 
         [OperationContract]
         bool InsertLoanAllocation(LoanAllocation loanAllocation);
+
+        [OperationContract]
+        IList<LoanAllocation> GetLoanAllocations(int customerID);
+
+        [OperationContract]
+        Employee GetEmployee(int id);
+
+        [OperationContract]
+        IList<Employee> GetEmployees();
+
+        [OperationContract]
+        Customer GetCustomer(int id);
+
+        [OperationContract]
+        IList<Customer> GetCustomers();
+
+        [OperationContract]
+        bool RecordPayment(Payment payment);
     }
 
 
@@ -117,15 +141,15 @@ namespace WattsALoanService
     }
 
     [DataContract]
-    public class Loan
+    public class LoanType
     {
         int loanTypeID;
-        string loanType;
+        string loanTypeName;
 
         [DataMember]
         public int LoanTypeID { get => loanTypeID; set => loanTypeID = value; }
         [DataMember]
-        public string LoanType { get => loanType; set => loanType = value; }
+        public string LoanTypeName { get => loanTypeName; set => loanTypeName = value; }
     }
 
     [DataContract]
@@ -159,5 +183,26 @@ namespace WattsALoanService
         public double InterestRate { get => interestRate; set => interestRate = value; }
         [DataMember]
         public double Periods { get => periods; set => periods = value; }
+    }
+
+    [DataContract]
+    public class Payment
+    {
+        int paymentID;
+        DateTime paymentDate;
+        int employeeID;
+        int loanAllocationID;
+        double paymentAmount;
+
+        [DataMember]
+        public int PaymentID { get => paymentID; set => paymentID = value; }
+        [DataMember]
+        public DateTime PaymentDate { get => paymentDate; set => paymentDate = value; }
+        [DataMember]
+        public int EmployeeID { get => employeeID; set => employeeID = value; }
+        [DataMember]
+        public int LoanAllocationID { get => loanAllocationID; set => loanAllocationID = value; }
+        [DataMember]
+        public double PaymentAmount { get => paymentAmount; set => paymentAmount = value; }
     }
 }

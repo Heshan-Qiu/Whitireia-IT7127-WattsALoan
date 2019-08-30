@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace WattsALoanClient
 {
-    public partial class Loan : System.Web.UI.Page
+    public partial class EmployeeAdd : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -16,18 +16,26 @@ namespace WattsALoanClient
 
         protected void ButtonSubmit_Click(object sender, EventArgs e)
         {
-            WattsALoanServiceReference.Loan loan = new WattsALoanServiceReference.Loan();
-            loan.LoanType = TbxLoanType.Text;
+            WattsALoanServiceReference.Employee employee = new WattsALoanServiceReference.Employee();
+            employee.EmployeeNumber = TbxEmployeeNumber.Text;
+            employee.FirstName = TbxFirstName.Text;
+            employee.LastName = TbxLastName.Text;
+            employee.Titles = TbxTitles.Text;
+            employee.HourlySalary = float.Parse(TbxHourlySalary.Text);
 
             WattsALoanServiceReference.WattsALoanServiceClient client = new WattsALoanServiceReference.WattsALoanServiceClient();
-            bool result = client.InsertLoan(loan);
+            bool result = client.InsertEmployee(employee);
             client.Close();
 
-            string script = @"alert(""Add loan type " + TbxLoanType.Text;
+            string script = @"alert(""Add employee " + TbxEmployeeNumber.Text;
             if (result)
             {
                 script += @" success."");";
-                TbxLoanType.Text = "";
+                TbxEmployeeNumber.Text = "";
+                TbxFirstName.Text = "";
+                TbxLastName.Text = "";
+                TbxTitles.Text = "";
+                TbxHourlySalary.Text = "";
             }
             else
             {

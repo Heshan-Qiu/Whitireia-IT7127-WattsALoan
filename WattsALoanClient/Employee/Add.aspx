@@ -1,9 +1,8 @@
-﻿<%@ Page Title="Add Employee" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Employee.aspx.cs" Inherits="WattsALoanClient.Employee" %>
+﻿<%@ Page Title="Add Employee" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Add.aspx.cs" Inherits="WattsALoanClient.EmployeeAdd" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h4><asp:SiteMapPath ID="SiteMapPath" runat="server"></asp:SiteMapPath></h4>
     <h2><%: Title %>.</h2>
-    <%: Page.GetRouteUrl( %>
     <div>
         <br />Employee Number:&nbsp;<asp:TextBox ID="TbxEmployeeNumber" runat="server" MaxLength="10"></asp:TextBox>
         <br /><br />First Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:TextBox ID="TbxFirstName" runat="server" MaxLength="20"></asp:TextBox>

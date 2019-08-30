@@ -10,7 +10,7 @@
 namespace WattsALoanClient {
     
     
-    public partial class Customer {
+    public partial class LoanAllocation {
         
         /// <summary>
         /// SiteMapPath control.
@@ -22,58 +22,67 @@ namespace WattsALoanClient {
         protected global::System.Web.UI.WebControls.SiteMapPath SiteMapPath;
         
         /// <summary>
-        /// TbxFullName control.
+        /// DdlEmployee control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TbxFullName;
+        protected global::System.Web.UI.WebControls.DropDownList DdlEmployee;
         
         /// <summary>
-        /// TbxAddress control.
+        /// DdlCustomer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TbxAddress;
+        protected global::System.Web.UI.WebControls.DropDownList DdlCustomer;
         
         /// <summary>
-        /// TbxCity control.
+        /// TbxAccountNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TbxCity;
+        protected global::System.Web.UI.WebControls.TextBox TbxAccountNumber;
         
         /// <summary>
-        /// TbxState control.
+        /// DdlLoanType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TbxState;
+        protected global::System.Web.UI.WebControls.DropDownList DdlLoanType;
         
         /// <summary>
-        /// TbxZipCide control.
+        /// TbxLoanAmount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TbxZipCide;
+        protected global::System.Web.UI.WebControls.TextBox TbxLoanAmount;
         
         /// <summary>
-        /// TbxEmail control.
+        /// TbxInterestRate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TbxEmail;
+        protected global::System.Web.UI.WebControls.TextBox TbxInterestRate;
+        
+        /// <summary>
+        /// TbxPeriods control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TbxPeriods;
         
         /// <summary>
         /// ButtonSubmit control.

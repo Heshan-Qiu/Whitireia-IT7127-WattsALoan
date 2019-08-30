@@ -7,16 +7,29 @@ using System.Web.UI.WebControls;
 
 namespace WattsALoanClient
 {
-    public partial class Employee : System.Web.UI.Page
+    public partial class EmployeeEdit : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                WattsALoanServiceReference.WattsALoanServiceClient client = new WattsALoanServiceReference.WattsALoanServiceClient();
+                WattsALoanServiceReference.Employee employee = client.GetEmployee(int.Parse(Request.QueryString["id"]));
+                client.Close();
 
+                TbxEmployeeID.Text = employee.EmployeeID.ToString();
+                TbxEmployeeNumber.Text = employee.EmployeeNumber;
+                TbxFirstName.Text = employee.FirstName;
+                TbxLastName.Text = employee.LastName;
+                TbxTitles.Text = employee.Titles;
+                TbxHourlySalary.Text = employee.HourlySalary.ToString();
+            }
         }
 
         protected void ButtonSubmit_Click(object sender, EventArgs e)
         {
             WattsALoanServiceReference.Employee employee = new WattsALoanServiceReference.Employee();
+            employee.EmployeeID = int.Parse(TbxEmployeeID.Text);
             employee.EmployeeNumber = TbxEmployeeNumber.Text;
             employee.FirstName = TbxFirstName.Text;
             employee.LastName = TbxLastName.Text;
@@ -24,18 +37,13 @@ namespace WattsALoanClient
             employee.HourlySalary = float.Parse(TbxHourlySalary.Text);
 
             WattsALoanServiceReference.WattsALoanServiceClient client = new WattsALoanServiceReference.WattsALoanServiceClient();
-            bool result = client.InsertEmployee(employee);
+            bool result = client.UpdateEmployee(employee);
             client.Close();
 
-            string script = @"alert(""Add employee " + TbxEmployeeNumber.Text;
+            string script = @"alert(""Edit employee " + TbxEmployeeNumber.Text;
             if (result)
             {
                 script += @" success."");";
-                TbxEmployeeNumber.Text = "";
-                TbxFirstName.Text = "";
-                TbxLastName.Text = "";
-                TbxTitles.Text = "";
-                TbxHourlySalary.Text = "";
             }
             else
             {

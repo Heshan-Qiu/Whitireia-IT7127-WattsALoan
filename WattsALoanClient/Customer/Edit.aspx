@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Customer" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Customer.aspx.cs" Inherits="WattsALoanClient.Customer" %>
+﻿<%@ Page Title="Customer" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Edit.aspx.cs" Inherits="WattsALoanClient.CustomerEdit" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h4><asp:SiteMapPath ID="SiteMapPath" runat="server"></asp:SiteMapPath></h4>
@@ -19,5 +19,6 @@
         <asp:RequiredFieldValidator runat="server" ControlToValidate="TbxEmail" ErrorMessage="Email address is required.">&nbsp;</asp:RequiredFieldValidator>
         <asp:RegularExpressionValidator runat="server" ControlToValidate="TbxEmail" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ErrorMessage="Email address is invalid.">&nbsp;</asp:RegularExpressionValidator>
         <br /><br /><asp:Button ID="ButtonSubmit" runat="server" CssClass="btn-primary" Text="Submit" OnClick="ButtonSubmit_Click" />
+        <asp:TextBox ID="TbxCustomerID" runat="server" Visible="false"></asp:TextBox>
     </div>
 </asp:Content>

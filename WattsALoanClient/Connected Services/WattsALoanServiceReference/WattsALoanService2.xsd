@@ -31,13 +31,19 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Customer" nillable="true" type="tns:Customer" />
-  <xs:complexType name="Loan">
+  <xs:complexType name="LoanType">
     <xs:sequence>
-      <xs:element minOccurs="0" name="LoanType" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="LoanTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="LoanTypeName" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="Loan" nillable="true" type="tns:Loan" />
+  <xs:element name="LoanType" nillable="true" type="tns:LoanType" />
+  <xs:complexType name="ArrayOfLoanType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LoanType" nillable="true" type="tns:LoanType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLoanType" nillable="true" type="tns:ArrayOfLoanType" />
   <xs:complexType name="LoanAllocation">
     <xs:sequence>
       <xs:element minOccurs="0" name="AccountNumber" nillable="true" type="xs:string" />
@@ -52,4 +58,32 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="LoanAllocation" nillable="true" type="tns:LoanAllocation" />
+  <xs:complexType name="ArrayOfLoanAllocation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LoanAllocation" nillable="true" type="tns:LoanAllocation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLoanAllocation" nillable="true" type="tns:ArrayOfLoanAllocation" />
+  <xs:complexType name="ArrayOfEmployee">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Employee" nillable="true" type="tns:Employee" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmployee" nillable="true" type="tns:ArrayOfEmployee" />
+  <xs:complexType name="ArrayOfCustomer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Customer" nillable="true" type="tns:Customer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCustomer" nillable="true" type="tns:ArrayOfCustomer" />
+  <xs:complexType name="Payment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EmployeeID" type="xs:int" />
+      <xs:element minOccurs="0" name="LoanAllocationID" type="xs:int" />
+      <xs:element minOccurs="0" name="PaymentAmount" type="xs:double" />
+      <xs:element minOccurs="0" name="PaymentDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PaymentID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Payment" nillable="true" type="tns:Payment" />
 </xs:schema>

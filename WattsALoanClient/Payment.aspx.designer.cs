@@ -10,7 +10,7 @@
 namespace WattsALoanClient {
     
     
-    public partial class Employee {
+    public partial class Payment {
         
         /// <summary>
         /// SiteMapPath control.
@@ -22,49 +22,40 @@ namespace WattsALoanClient {
         protected global::System.Web.UI.WebControls.SiteMapPath SiteMapPath;
         
         /// <summary>
-        /// TbxEmployeeNumber control.
+        /// DdlEmployee control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TbxEmployeeNumber;
+        protected global::System.Web.UI.WebControls.DropDownList DdlEmployee;
         
         /// <summary>
-        /// TbxFirstName control.
+        /// DdlCustomer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TbxFirstName;
+        protected global::System.Web.UI.WebControls.DropDownList DdlCustomer;
         
         /// <summary>
-        /// TbxLastName control.
+        /// DdlLoanAllocation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TbxLastName;
+        protected global::System.Web.UI.WebControls.DropDownList DdlLoanAllocation;
         
         /// <summary>
-        /// TbxTitles control.
+        /// TbxPaymentAmount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TbxTitles;
-        
-        /// <summary>
-        /// TbxHourlySalary control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TbxHourlySalary;
+        protected global::System.Web.UI.WebControls.TextBox TbxPaymentAmount;
         
         /// <summary>
         /// ButtonSubmit control.
